@@ -64,11 +64,11 @@ public class PassphraseGenerator {
         System.out.println(String.format("Found %d words in the dictionary", dictionary.size()));
     }
 
-    public String nextPassphrase(@NotNull String hint){
+    public Passphrase nextPassphrase(@NotNull String hint){
         return generagePassphrase(hint);
     }
 
-    public String nextPassphrase(){
+    public Passphrase nextPassphrase(){
         return generagePassphrase(null);
     }
 
@@ -79,7 +79,7 @@ public class PassphraseGenerator {
         return this.random.nextInt(3)+5;
     }
 
-    private String generagePassphrase(String hint){
+    private Passphrase generagePassphrase(String hint){
 
         List<String> phrases = new ArrayList<String>();
         if(hint != null && charToWordMap == null){
@@ -102,7 +102,7 @@ public class PassphraseGenerator {
             sb.append(this.config.getTokenSeperator());
         }
         sb.append(phrases.get(phrases.size()-1));
-        return sb.toString();
+        return new Passphrase(sb.toString());
     }
 
     private String getRandomWord(List<String> words){

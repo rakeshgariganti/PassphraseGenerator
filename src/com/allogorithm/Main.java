@@ -6,9 +6,9 @@ public class Main {
 
     public static void main(String[] args) {
         long a = new Date().getTime();
-	    PassphraseGeneratorConfig config = new PassphraseGeneratorConfig().settokenSeperator(":").setNumWords(6).setwordLendth(6).setIsHintAllowed(Boolean.TRUE);
+	    PassphraseGeneratorConfig config = new PassphraseGeneratorConfig().setIsHintAllowed(Boolean.TRUE);
         PassphraseGenerator generator = new PassphraseGenerator(config);
-        System.out.println(generator.nextPassphrase("cattt"));
+        System.out.println(generator.nextPassphrase("rakesh"));
         System.out.println("Time taken : "+(new Date().getTime() - a));
     }
 }

@@ -33,4 +33,8 @@ public class Passphrase {
     double getStrength(){
         return this.strength;
     }
+
+    public String toString(){
+        return this.passphrase;
+    }
 }
