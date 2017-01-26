@@ -6369,7 +6369,7 @@ struggling
 feast
 241
 dish
-hint
+isHintAllowed
 designing
 transient
 mason
