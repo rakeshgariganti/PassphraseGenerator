@@ -6,7 +6,8 @@ package com.allogorithm;
  * 1. numWords = number of words to use in the passphrase
  * 2. wordLength = word length of each word in the passphrase
  * 3. tokenSeperator = separator to separate words in the phrase. default is SPACE
- *
+ * 4. hint = password phrase will contain a word starting with each char present in the hint. ("cat" may result in "coffee apple table")
+ *          When hint is supplied, hint will override numWords setting.
  * Created by garigant on 26/01/17.
  *
  */
@@ -15,15 +16,18 @@ public class PassphraseGeneratorConfig {
     private int numWords;
     private int wordLength;
     private String tokenSeperator = " ";
+    private String hint;
 
-    PassphraseGeneratorConfig(int numWords, int wordLendth){
+    PassphraseGeneratorConfig(int numWords, int wordLendth, String hint){
         this.numWords = numWords;
         this.wordLength = wordLendth;
+        this.hint = hint;
     }
 
-    PassphraseGeneratorConfig(int numWords, int wordLendth, String tokenSeperator){
+    PassphraseGeneratorConfig(int numWords, int wordLendth, String hint, String tokenSeperator){
         this.numWords = numWords;
         this.wordLength = wordLendth;
+        this.hint = hint;
         this.tokenSeperator = tokenSeperator;
     }
 
@@ -43,14 +47,18 @@ public class PassphraseGeneratorConfig {
     }
 
     public int getNumWords(){
-        return numWords;
+        return this.numWords;
     }
 
     public int getWordLength(){
-        return wordLength;
+        return this.wordLength;
     }
 
     public String getTokenSeperator(){
-        return tokenSeperator;
+        return this.tokenSeperator;
+    }
+
+    public String getHint(){
+        return this.hint;
     }
 }
