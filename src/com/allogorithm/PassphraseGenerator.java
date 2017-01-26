@@ -11,17 +11,25 @@ import com.allogorithm.PassphraseGeneratorConfig;
 public class PassphraseGenerator {
 
     private static final String DICT_FILE = "dict.txt";
-    private PassphraseGeneratorConfig passphraseGeneratorConfig;
-
+    private PassphraseGeneratorConfig config;
 
     PassphraseGenerator(PassphraseGeneratorConfig passphraseGeneratorConfig){
-        this.passphraseGeneratorConfig = passphraseGeneratorConfig;
+        this.config = passphraseGeneratorConfig;
         initialize();
+    }
+
+    void setConfig(PassphraseGeneratorConfig config){
+        int oldWordLength = config.getWordLength();
+        this.config = config;
+        if(config.getWordLength() != oldWordLength){
+            initialize();
+        }
     }
 
     private void initialize(){
         //TODO initilize the dictionary
 
     }
+
 
 }
