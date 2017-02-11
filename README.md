@@ -2,7 +2,7 @@
 Java library to generate passphrases
 
 Examples:
-`
+```
         PassphraseGeneratorConfig configWithHints = new PassphraseGeneratorConfig().setIsHintAllowed(Boolean.TRUE);
         PassphraseGenerator passphraseGenerator = new PassphraseGenerator(configWithHints);
         System.out.println(passphraseGenerator.nextPassphrase("apple"));
@@ -19,4 +19,4 @@ Examples:
         passphraseGenerator.setConfig(configWithNumWords);
         System.out.println(passphraseGenerator.nextPassphrase());
 
-`
+```
