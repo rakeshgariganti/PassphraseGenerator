@@ -1,4 +1,4 @@
-package com.allogorithm;
+package com.allogorithm.passphrase;
 
 /**
  * Created by garigant on 26/01/17.

@@ -1,4 +1,4 @@
-package com.allogorithm;
+package com.allogorithm.passphrase;
 
 import com.sun.istack.internal.NotNull;
 

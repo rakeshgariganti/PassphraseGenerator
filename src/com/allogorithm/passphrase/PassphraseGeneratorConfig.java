@@ -1,4 +1,4 @@
-package com.allogorithm;
+package com.allogorithm.passphrase;
 
 /**
  * PassPhrase Generator configuration class.
