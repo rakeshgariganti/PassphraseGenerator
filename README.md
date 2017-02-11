@@ -20,3 +20,8 @@ Examples:
         System.out.println(passphraseGenerator.nextPassphrase());
 
 ```
+Output:
+* accords predict persuaded less erected
+* byron extremely endeavour routing
+* weighs defiance brightness broadest hiding
+* outweigh:replaces:founder:biochem:banners:transmit
